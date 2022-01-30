@@ -5,9 +5,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   selector: 'add-client-form',
   template: `
   <form (ngSubmit)="onSubmit()" [formGroup]="form">
-  <input type="text" placeholder="Nom Complet" name="fullName" formControlName="fullname" >
-  <input type="email" placeholder="email" name="email" formControlName="mail" >
-  <button [disabled]="!isValid()"> Enregistrer </button>
+  <div class="row text-center" ><input type="text" placeholder="Nom Complet" name="fullName" formControlName="fullname" ></div>
+  <div class="row text-center"><input type="email" placeholder="email" name="email" formControlName="mail" ></div>
+  <div class="row text-center"><button [disabled]="!isValid()"> Enregistrer </button></div>
+  <a routerLink="/"> Retour aux clients </a>
   </form>
   `,
   styles: []

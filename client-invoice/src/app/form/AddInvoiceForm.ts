@@ -5,13 +5,14 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   selector: 'add-invoice-form',
   template: `
   <form (ngSubmit)="onSubmit()" [formGroup]="form">
-  <input formControlName="amount" type="number" placeholder="Montant de la facture" name="amount">
-  <select formControlName="status" name="status">
+  <div class="row text-center" ><input formControlName="amount" type="number" placeholder="Montant de la facture" name="amount"></div>
+  <div class="row text-center" ><select formControlName="status" name="status">
     <option value="Payée">PAID</option>
     <option value="Envoyée">SENT</option>
-  </select>
-  <input [disabled]="!isValid()" type="submit" value="Enregistrer la facture">
+  </select></div>
+  <div class="row text-center" ><input [disabled]="!isValid()" type="submit" value="Enregistrer la facture"></div>
   </form>
+
   `,
   styles: []
 })
